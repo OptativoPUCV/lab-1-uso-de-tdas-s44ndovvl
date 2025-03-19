@@ -64,13 +64,13 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
 
-   int suma = 0;
    int* elemento = (int*)(first(L));
+   int suma = *elemento;
 
    while(elemento)
    {
-      suma += (*elemento);
       elemento = (int*)(next(L));
+      suma += (*elemento);
    }
 
    
