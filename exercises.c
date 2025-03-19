@@ -43,6 +43,17 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
+
+   for(int k = 1; k <= 10; k++)
+   {
+      int *ptrNumero = malloc(sizeof(int));
+      //if(ptrNumero == NULL) exit(EXIT_FAILURE);
+
+      *ptrNumero = k;
+
+      pushBack(L, ptrNumero);
+   }
+
    return L;
 }
 
@@ -52,7 +63,18 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   return 0;
+
+   int* elemento = (int*)(first(L));
+   int suma = *elemento;
+
+   while(elemento)
+   {
+      elemento = (int*)(next(L));
+      suma += (*elemento);
+   }
+
+   
+   return suma;
 }
 
 /*
