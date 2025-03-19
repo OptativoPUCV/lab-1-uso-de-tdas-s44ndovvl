@@ -115,6 +115,8 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
+
+   //usar una pila para voltear cadena y luego comparar si son iguales, a medida que se elimina la lista creada
    return 0;
 }
 
