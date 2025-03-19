@@ -66,13 +66,11 @@ int sumaLista(List *L) {
 
    int suma = 0;
    int* elemento = (int*)(first(L));
-   
-   suma += *elemento;
 
    while(elemento)
    {
-      elemento = (int*)(next(L));
       suma += (*elemento);
+      elemento = (int*)(next(L));
    }
 
    
