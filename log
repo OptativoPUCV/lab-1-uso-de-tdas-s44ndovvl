@@ -62,3 +62,9 @@ mi., 19 de mar. de 2025 22:50:44:
  tests:  3|2
 total_score: 40/70
 8110691
+mi., 19 de mar. de 2025 22:52:27: 
+ exercises.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ tests:  4|1
+total_score: 50/70
+856736d
