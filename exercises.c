@@ -130,8 +130,40 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
+   
+   int tallaString = len(cadena);
+   if(tallaString % 2 != 0) return 0;
+   
+   Stack* pila = create_stack();
+
+   for(int k = 0; k < tallaString; k++) push(pila, (cadena + k));
+
+   int posMitad = (tallaString / 2) -1;
+
+   for(int k = posMitad; k < tallaString; k++)
+   {
+      char * caracter = top(pila);
+
+      if(*(cadena + k) == ')')
+      {
+         if(*caracter != '(') return 0;
+      }
+      
+      else if(*(cadena + k) == '}')
+      {
+         if(*caracter != '{') return 0;
+      }
+
+      else(*(cadena + k) == ']')
+      {
+         if(*caracter != '[') return 0;
+      }
+
+      por(pila);
+   }
+
 
    //usar una pila para voltear cadena y luego comparar si son iguales, a medida que se elimina la lista creada
-   return 0;
+   return 1;
 }
 
