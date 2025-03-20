@@ -138,25 +138,23 @@ int parentesisBalanceados(char *cadena) {
 
    for(int k = 0; k < tallaString; k++) push(pila, (cadena + k));
 
-   int posMitad = (tallaString / 2) -1;
+   int mitad = (tallaString / 2);
 
-   for(int k = posMitad; k < tallaString; k++)
+   for(int k = 0; k < mitad; k++)
    {
       char *caracter = top(pila);
 
-      if(*(cadena + k) == ')')
+      if(*(cadena + k) == '(')
       {
-         if(*caracter != '(') return 0;
+         if(*caracter != ')') return 0;
       }
-      else if(*(cadena + k) == '}')
+      else if(*(cadena + k) == '{')
       {
-         if(*caracter != '{') return 0;
+         if(*caracter != '}') return 0;
       }
-      else(*(cadena + k) == ']')
-         if(*caracter != '[') return 0;
+      else if(*(cadena + k) == '[') if(*caracter != ']') return 0;
       
-
-      por(pila);
+      pop(pila);
    }
 
 

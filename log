@@ -109,3 +109,9 @@ exercises.c:159:7: error: implicit declaration of function 'por'; did you mean '
 cc1.exe: all warnings being treated as errors
 Compilation failed
 1a28c70
+ju., 20 de mar. de 2025  8:33:46: 
+ exercises.c | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
+collect2.exe: error: ld returned 5 exit status
+Compilation failed
+0058ea8
