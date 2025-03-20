@@ -88,3 +88,24 @@ exercises.c:157:33: error: expected ';' before '{' token
 cc1.exe: all warnings being treated as errors
 Compilation failed
 ac25728
+mi., 19 de mar. de 2025 23:21:40: 
+ exercises.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:155:26: error: statement with no effect [-Werror=unused-value]
+  155 |       else(*(cadena + k) == ']')
+      |           ~~~~~~~~~~~~~~~^~~~~~~
+exercises.c:155:33: error: expected ';' before 'if'
+  155 |       else(*(cadena + k) == ']')
+      |                                 ^
+      |                                 ;
+  156 |          if(*caracter != '[') return 0;
+      |          ~~                      
+exercises.c:159:7: error: implicit declaration of function 'por'; did you mean 'pop'? [-Wimplicit-function-declaration]
+  159 |       por(pila);
+      |       ^~~
+      |       pop
+cc1.exe: all warnings being treated as errors
+Compilation failed
+1a28c70
